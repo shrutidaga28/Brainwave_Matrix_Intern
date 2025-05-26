@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Day Planner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <h1>✨ Day Planner</h1>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+
+
+    <div class="task-input">
+      <input type="text" id="task" placeholder="Add your task..." />
+      <input type="time" id="time" />
+      <input type="date" id="date" />
+      <select id="priority">
+        <option value="Low">Low Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="High">High Priority</option>
+      </select>
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <div class="filter-section">
+      <label for="filterDate">📅 Filter by Date:</label>
+      <input type="date" id="filterDate" onchange="filterTasksByDate()" />
+      <button onclick="downloadPDF()">📄 Download PDF</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
